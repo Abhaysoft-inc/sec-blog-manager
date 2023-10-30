@@ -1,0 +1,8 @@
+{
+  "name": "SecBlog Manager",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "e9d27797"
+}
