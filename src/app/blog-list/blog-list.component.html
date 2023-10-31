@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Secure Blog</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    </ion-fab>
+  <ion-list>
+    
+    <ion-item *ngFor="let post of blogPostTitles" [routerLink]="['/blog-detail', post._id]">
+        {{ post.title }}
+        {{post.id}}
+    </ion-item>
+  </ion-list>
+</ion-content> 
+

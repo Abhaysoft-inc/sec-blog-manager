@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ blogPost.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-button color="primary" (click)="updatePost()">Update Post</ion-button>
+<ion-button color="danger" (click)="deletePost()">Delete Post</ion-button>
+<ion-content>
+
+  
+  <ion-card>
+    <ion-card-header>
+      {{ blogPost.title }}
+    </ion-card-header>
+
+    <ion-card-content>
+      <div [innerHTML]="blogPost.content | trustedHtml"></div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-loading></ion-loading>

@@ -1,11 +1,19 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+import { BlogListComponent } from './blog-list/blog-list.component';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
+
+
+
 const routes: Routes = [
-  {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  }
+    { path: '', redirectTo: 'blog-list', pathMatch: 'full' },
+  { path: 'blog-list', component: BlogListComponent },
+  // { path: 'blog-detail', component: BlogDetailComponent },
+  { path: 'blog-detail/:id', component: BlogDetailComponent },
+  { path: 'edit-post/:id', component: EditPostComponent },
+
 ];
 @NgModule({
   imports: [

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ post.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+  <ion-list >
+    <ion-item>
+      <!-- <ion-label>Title</ion-label> -->
+      <ion-input label="Title" labelPlacement="floating" [(ngModel)]="post.title"></ion-input>
+    </ion-item>
+    <ion-item >
+      <!-- <ion-label >Content</ion-label> -->
+      <ion-textarea label="Content" labelPlacement="floating" fill="solid" [autoGrow]="true" [(ngModel)]="post.content"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="updatePost()">Update</ion-button>
+</ion-content>
+
