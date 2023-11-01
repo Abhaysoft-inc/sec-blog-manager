@@ -4,6 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { BlogListComponent } from './blog-list/blog-list.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
+import { NewPostComponent } from './new-post/new-post.component';
 
 
 
@@ -13,6 +14,7 @@ const routes: Routes = [
   // { path: 'blog-detail', component: BlogDetailComponent },
   { path: 'blog-detail/:id', component: BlogDetailComponent },
   { path: 'edit-post/:id', component: EditPostComponent },
+  { path: 'new-post', component: NewPostComponent},
 
 ];
 @NgModule({
