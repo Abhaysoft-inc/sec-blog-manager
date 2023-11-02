@@ -17,4 +17,7 @@ export class BlogService {
   updatePostById(id:any,postData: any): Observable<any> {
     return this.http.put(`https://secureblog-backend.onrender.com/api/blogs/${id}`, postData);
   }
+  createPost(newPostData: any): Observable<any> {
+    return this.http.post('https://secureblog-backend.onrender.com/api/blogs', newPostData);
+  }
 }

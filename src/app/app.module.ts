@@ -12,12 +12,16 @@ import { BlogListComponent } from './blog-list/blog-list.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
 import { TrustedHtmlPipe } from './trusted-html.pipe';
 import { FormsModule } from '@angular/forms';
+import { NewPostComponent } from './new-post/new-post.component';
+
 
 
 @NgModule({
-  declarations: [AppComponent,BlogListComponent,BlogDetailComponent,TrustedHtmlPipe,EditPostComponent],
+  declarations: [AppComponent,BlogListComponent,BlogDetailComponent,TrustedHtmlPipe,EditPostComponent, NewPostComponent, SummernoteDirective],
   imports: [FormsModule,RouterModule,AppRoutingModule,BrowserModule, IonicModule.forRoot(), HttpClientModule,],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+
